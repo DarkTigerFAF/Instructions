@@ -80,12 +80,7 @@ Add the following properties to your `application.properties` or `application.ym
 # JWT Configuration
 jwt.secret=Z2V0LWFjdHVhbC1rZXktZnJvbS1wcm9wcy1maWxlLW9yLWVudi1zZWN1cmVseQ==
 spring.security.oauth2.resourceserver.jwt.secret=Z2V0LWFjdHVhbC1rZXktZnJvbS1wcm9wcy1maWxlLW9yLWVudi1zZWN1cmVseQ==
-
-# Security Configuration
-spring.security.oauth2.resourceserver.jwt.issuer-uri=http://localhost:8080
 ```
-
-**Important**: Replace the JWT secret with a secure, randomly generated key. The provided secret is just an example.
 
 ## Implementation
 
@@ -320,7 +315,7 @@ The configuration above automatically extracts roles from the JWT's `roles` clai
 
 ```json
 {
-  "sub": "user123",
+  "sub": "user123@example.com",
   "roles": ["ROLE_ADMIN", "ROLE_USER"],
   "exp": 1640995200
 }
